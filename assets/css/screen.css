@@ -23,8 +23,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/footer.css";
 @import "ghost/badge.css";
 
-
-
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
@@ -102,7 +100,7 @@ html,
 
 .gh-card-meta {
     display: block;
-    margin: 0 0 1rem;
+    margin: 2rem 0 0;
     font-size: 1.4rem;
     line-height: 1.2em;
     letter-spacing: 0.1px;
@@ -128,7 +126,6 @@ html,
     box-shadow: 0 -1px 0 0 inset currentColor;
     opacity: 0.5;
 }
-
 
 /* Page
 /* ---------------------------------------------------------- */
@@ -158,7 +155,6 @@ html,
     }
 }
 
-
 /* Post
 /* ---------------------------------------------------------- */
 
@@ -176,7 +172,7 @@ html,
 }
 
 .gh-title {
-  margin-bottom: 2vmin;
+    margin-bottom: 2vmin;
 }
 
 .gh-excerpt {
@@ -193,6 +189,28 @@ html,
     margin: 2rem 0;
 }
 
+.primary-tag {
+    display: inline-block;
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.primary-tag:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.primary-tag a {
+    text-decoration: none;
+    /* color: white; */
+    color: rgba(0, 0, 0, 0.3);
+    padding: 0 0.8rem;
+    display: block;
+}
 
 /* Author Archive
 /* ---------------------------------------------------------- */
@@ -230,7 +248,7 @@ html,
     margin: 0 1.25vmin 0 0;
     height: 1em;
     width: 1px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     transform: rotate(20deg);
 }
 
