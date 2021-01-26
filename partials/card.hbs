@@ -3,22 +3,24 @@ Re-usable card for linking to posts
 }}
 <article class="gh-card {{post_class}}">
   <div class="gh-card-content">
-    {{#primary_tag}}
-      <div class="primary-tag">
-        <a href="{{url}}">
-          {{name}}
-        </a>
-      </div>
-    {{/primary_tag}}
+    <div class="gh-card-tags">
+      {{#primary_tag}}
+        <div class="primary-tag">
+          <a href="{{url}}">
+            {{name}}
+          </a>
+        </div>
+      {{/primary_tag}}
+    </div>
     <h2 class="gh-card-title">
       <a href="{{url}}">
         {{title}}
       </a>
     </h2>
-    <span class="gh-author-meta">
-      {{authors}}
-    </span>
     <span class="gh-card-meta">
+      <div class="gh-authors">
+        {{authors}}
+      </div>
       <time datetime="{{date format="YYYY-MM-DD"}}">
         {{date format="D MMM YYYY"}}
       </time>

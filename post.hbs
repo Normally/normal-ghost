@@ -3,10 +3,29 @@
 {{#post}}
 
 <article class="gh-article {{post_class}}">
-
     <header class="gh-header gh-canvas">
-        <h1 class="gh-title">{{title}}</h1>
-        <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time></span>
+      <div class="gh-post-tags">
+        {{#primary_tag}}
+          <div class="primary-tag">
+            <a href="{{url}}">
+              {{name}}
+            </a>
+          </div>
+        {{/primary_tag}}
+        </div>
+        <h1 class="gh-title">
+          <a href="{{url}}">
+            {{title}}
+          </a>
+        </h1>
+        <span class="gh-post-meta">
+          <div class="gh-authors">
+            {{authors}}
+          </div>
+          <time datetime="{{date format="YYYY-MM-DD"}}">
+            {{date format="D MMM YYYY"}}
+          </time>
+        </span>
 
         {{#if custom_excerpt}}
         <p class="gh-excerpt">{{custom_excerpt}}</p>
@@ -32,9 +51,6 @@
 
     <footer class="gh-footer gh-canvas">
 
-        <div class="gh-post-authors">
-            Written by {{#foreach authors}}<a href="{{url}}">{{name}}</a>{{/foreach}}
-        </div>
 
         {{!--
         <section class="gh-post-comments">
