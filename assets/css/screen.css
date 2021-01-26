@@ -97,6 +97,7 @@ html,
     max-height: 700px;
     object-fit: cover;
     margin-bottom: 4vmin;
+    margin-top: 4vmin;
 }
 
 .gh-card-meta {
@@ -104,21 +105,20 @@ html,
     margin: 0 0 1rem;
     font-size: 1.4rem;
     line-height: 1.2em;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    letter-spacing: 0.1px;
     opacity: 0.8;
 }
 
 .gh-card-content {
     max-width: 720px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     font-size: 1.6rem;
 }
 
 .gh-card-content p {
     margin: 1.2rem 0;
-    padding: 0 6vmin;
+    /* padding: 0 6vmin; */
 }
 
 .gh-card-content > strong {
@@ -164,16 +164,19 @@ html,
 
 .gh-header {
     padding: 0 0 8vmin 0;
-    text-align: center;
+    text-align: left;
 }
 
 .gh-post-meta {
     display: block;
     margin: 0 0 1rem;
     font-size: 1.4rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    letter-spacing: 0.1px;
     opacity: 0.8;
+}
+
+.gh-title {
+  margin-bottom: 2vmin;
 }
 
 .gh-excerpt {
