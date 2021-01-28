@@ -17,38 +17,40 @@
 <body class="{{body_class}}">
 <div class="gh-viewport">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
+<style>
+  /* WIP – to move */
 
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
-                </div>
-            </a>
-        </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{#if @site.facebook}}
-                <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            </div>
-        </div>
-    </nav>
+  .n-head-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .n-head-sitelink a {
+    padding-bottom: 2px;
+    border-bottom: 0px solid #464646;
+  }
+
+  .n-head-sitelink a:hover {
+    border-bottom: 1px solid #464646
+  }
+</style>
+
+<header class="gh-head">
+  <div class="n-head-inner gh-container">
+    <div class="n-head-logo">
+      <a class="gh-head-logo" href="{{@site.url}}">
+        {{#if @site.logo}}
+            <img src="{{@site.logo}}" alt="{{@site.title}}" />
+        {{else}}
+            {{@site.title}}
+        {{/if}}
+      </a>
+    </div>
+    <div class="n-head-sitelink">
+      <a href="https://normally.com">normally.com</a>
+    </div>
+  </div>
 </header>
 
 <main class="gh-main">
