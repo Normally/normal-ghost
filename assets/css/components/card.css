@@ -1,0 +1,81 @@
+.card {
+    margin-bottom: 6rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-details,
+.card-image {
+    width: 48%;
+}
+
+@media (max-width: 700px) {
+    .gh-page {
+        padding: 0;
+    }
+
+    .card {
+        padding: 0 4vmin 0 4vmin;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 8vmin;
+    }
+
+    .card-container {
+        flex-flow: column;
+    }
+    .card-details,
+    .card-image {
+        width: auto;
+    }
+    .card-image {
+        order: 1;
+    }
+    .card-details {
+        order: 2;
+    }
+}
+
+.card-image img {
+    width: 100%;
+}
+
+.card-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.card-title a {
+    color: black;
+    text-decoration: none;
+}
+
+.card-excerpt {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.card-meta {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.authors {
+    font-weight: 400;
+    margin-right: 0.5rem;
+}
+
+.authors a {
+    color: black;
+    text-decoration: none;
+}
+
+.card-meta time {
+    opacity: 0.5;
+    margin-left: 0.5rem;
+}

@@ -23,8 +23,17 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "ghost/footer.css";
 @import "ghost/badge.css";
 
+/* Normally components */
+@import "components/card.css";
+
 /* New styles
 /* ---------------------------------------------------------- */
+
+html,
+body {
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
 
 html,
 .gh-viewport {
