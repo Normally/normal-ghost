@@ -1,55 +1,141 @@
 {{!
 Re-usable card for linking to posts
 }}
-<article class="gh-card {{post_class}}">
-  <div class="gh-card-content">
-    <div class="gh-card-tags">
-      {{#primary_tag}}
-        <div class="primary-tag">
-          <a href="{{url}}">
-            {{name}}
-          </a>
-        </div>
-      {{/primary_tag}}
-    </div>
-    <h2 class="gh-card-title">
-      <a href="{{url}}">
-        {{title}}
-      </a>
-    </h2>
-    <span class="gh-card-meta">
-      <div class="gh-authors">
-        {{authors}}
+<style>
+  html, body {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  }
+
+  .card {
+    margin-bottom: 6rem;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-details, .card-image {
+    width: 48%;
+  }
+
+  @media (max-width: 700px) {
+    .gh-page {
+      padding: 0;
+    }
+
+    .card {
+      padding: 0 4vmin 0 4vmin;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #CCC;
+      margin-bottom: 8vmin;
+    }
+
+    .card-container {
+      flex-flow: column;
+    }
+    .card-details, .card-image {
+      width: auto;
+    }
+    .card-image {
+      order: 1;
+    }
+    .card-details {
+      order: 2;
+    }
+  }
+
+  .card-image img {
+    width: 100%;
+  }
+
+  .card-title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  .card-title a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .card-excerpt {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .card-meta {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .authors {
+    font-weight: 400;
+    margin-right: 0.5rem;
+  }
+
+  .authors a {
+    color: black;
+    text-decoration: none;
+  }
+
+  .card-meta time {
+    opacity: 0.5;
+    margin-left: 0.5rem;
+  }
+</style>
+<article class="card {{post_class}}">
+  <div class="card-container">
+    <div class="card-details">
+      <h2 class="card-title">
+        <a href="{{url}}">
+          {{title}}
+        </a>
+      </h2>
+      <p class="card-excerpt">
+        {{excerpt}}
+      </p>
+      <div class="card-meta">
+        <span class="authors">
+          {{authors}}
+        </span>
+        ·
+        <time datetime="{{date format="YYYY-MM-DD"}}">
+          {{date format="D MMM YYYY"}}
+        </time>
       </div>
-      <time datetime="{{date format="YYYY-MM-DD"}}">
-        {{date format="D MMM YYYY"}}
-      </time>
-    </span>
-    {{#if feature_image}}
-      <a href="{{url}}">
-        <img
-          class="gh-card-image"
-          srcset="{{img_url feature_image size="s"}}
-             300w,
-            {{img_url feature_image size="m"}}
-             600w,
-            {{img_url feature_image size="l"}}
-             1000w,
-            {{img_url feature_image size="xl"}}
-             2000w"
-          sizes="(max-width: 1000px) 400px, 700px"
-          src="{{img_url feature_image size="m"}}"
-          alt="{{title}}"
-        />
-      </a>
-    {{/if}}
-    <p>
-      {{excerpt}}
-    </p>
-    <strong>
-      <a href="{{url}}">
-        Read post →
-      </a>
-    </strong>
+      <div class="gh-card-tags">
+        {{#primary_tag}}
+          <div class="primary-tag">
+            <a href="{{url}}">
+              {{name}}
+            </a>
+          </div>
+        {{/primary_tag}}
+      </div>
+    </div>
+    <div class="card-image">
+      {{#if feature_image}}
+        <a href="{{url}}">
+          <img
+            class="card-image"
+            srcset="{{img_url feature_image size="s"}}
+               300w,
+              {{img_url feature_image size="m"}}
+               600w,
+              {{img_url feature_image size="l"}}
+               1000w,
+              {{img_url feature_image size="xl"}}
+               2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            src="{{img_url feature_image size="m"}}"
+            alt="{{title}}"
+          />
+        </a>
+      {{/if}}
+    </div>
   </div>
 </article>

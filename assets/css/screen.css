@@ -126,7 +126,7 @@ h2.gh-card-title a {
 }
 
 .gh-card-content {
-    max-width: 720px;
+    /* max-width: 720px; */
     margin: 0 auto;
     text-align: left;
     font-size: 1.6rem;
