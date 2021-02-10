@@ -22,15 +22,17 @@
           {{date format="D MMM YYYY"}}
         </time>
       </div>
-      <div class="gh-card-tags">
-        {{#primary_tag}}
-          <div class="primary-tag">
-            <a href="{{url}}">
-              {{name}}
-            </a>
-          </div>
-        {{/primary_tag}}
-      </div>
+      {{#if tags}}
+        <div class="gh-card-tags">
+          {{#foreach tags}}
+            <div class="post-tag">
+              <a href="{{url}}">
+                {{name}}
+              </a>
+            </div>
+          {{/foreach}}
+        </div>
+      {{/if}}
     </div>
     <div class="card-image">
       {{#if feature_image}}

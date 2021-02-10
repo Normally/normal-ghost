@@ -1,3 +1,12 @@
+/*
+
+  Reusable post card
+  ------------------
+
+  Responsive styles at the end.
+
+*/
+
 .card {
     margin-bottom: 6rem;
 }
@@ -10,33 +19,6 @@
 .card-details,
 .card-image {
     width: 48%;
-}
-
-@media (max-width: 700px) {
-    .gh-page {
-        padding: 0;
-    }
-
-    .card {
-        padding: 0 4vmin 0 4vmin;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 8vmin;
-    }
-
-    .card-container {
-        flex-flow: column;
-    }
-    .card-details,
-    .card-image {
-        width: auto;
-    }
-    .card-image {
-        order: 1;
-    }
-    .card-details {
-        order: 2;
-    }
 }
 
 .card-image img {
@@ -79,6 +61,38 @@
 .card-meta time {
     opacity: 0.5;
     margin-left: 0.5rem;
+}
+
+/* Responsive styles */
+
+@media (max-width: 700px) {
+    .gh-page {
+        padding: 0;
+    }
+
+    .card {
+        padding: 0 4vmin 0 4vmin;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 8vmin;
+    }
+
+    .card-container {
+        flex-flow: column;
+    }
+
+    .card-details,
+    .card-image {
+        width: auto;
+    }
+
+    .card-image {
+        order: 1;
+    }
+
+    .card-details {
+        order: 2;
+    }
 }
 
 @media (max-width: 500px) {

@@ -4,15 +4,17 @@
 
 <article class="gh-article {{post_class}}">
     <header class="gh-header gh-canvas">
-      <div class="gh-post-tags">
-        {{#primary_tag}}
-          <div class="primary-tag">
-            <a href="{{url}}">
-              {{name}}
-            </a>
-          </div>
-        {{/primary_tag}}
+      {{#if tags}}
+        <div class="gh-card-tags">
+          {{#foreach tags}}
+            <div class="post-tag">
+              <a href="{{url}}">
+                {{name}}
+              </a>
+            </div>
+          {{/foreach}}
         </div>
+      {{/if}}
         <h1 class="gh-title">
           <a href="{{url}}">
             {{title}}

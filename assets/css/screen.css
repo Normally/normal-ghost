@@ -247,7 +247,7 @@ h1.gh-title a {
     margin: 2rem 0;
 }
 
-.primary-tag {
+.post-tag {
     display: inline-block;
     /* background-color: rgba(0, 0, 0, 0.3); */
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -256,13 +256,14 @@ h1.gh-title a {
     font-size: 1rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
-.primary-tag:hover {
+.post-tag:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.primary-tag a {
+.post-tag a {
     text-decoration: none;
     /* color: white; */
     color: rgba(0, 0, 0, 0.3);
