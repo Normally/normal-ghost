@@ -1,0 +1,29 @@
+.gh-card-tags {
+    margin-bottom: 0rem;
+}
+
+.post-tag {
+    display: inline-block;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.post-tag:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.post-tag a {
+    text-decoration: none;
+    color: black;
+    padding: 0.2rem 1.5rem;
+    display: block;
+}
+
+.gh-post-tags {
+    margin-bottom: 1rem;
+}

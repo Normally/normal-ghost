@@ -25,6 +25,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 
 /* Normally components */
 @import "components/card.css";
+@import "components/tag.css";
 
 /* New styles
 /* ---------------------------------------------------------- */
@@ -156,10 +157,6 @@ h2.gh-card-title a {
     color: inherit;
 }
 
-.gh-card-tags {
-    margin-bottom: 0rem;
-}
-
 /* Page
 /* ---------------------------------------------------------- */
 
@@ -245,34 +242,6 @@ h1.gh-title a {
 
 .gh-post-footer {
     margin: 2rem 0;
-}
-
-.post-tag {
-    display: inline-block;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 100px;
-    font-weight: bold;
-    font-size: 1rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
-}
-
-.post-tag:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-.post-tag a {
-    text-decoration: none;
-    /* color: white; */
-    color: rgba(0, 0, 0, 0.3);
-    padding: 0 0.8rem;
-    display: block;
-}
-
-.gh-post-tags {
-    margin-bottom: 1rem;
 }
 
 /* Author Archive
