@@ -15,7 +15,6 @@ production stylesheet in assets/built/screen.css using: gulp dev
 @import "components/buttons.css";
 
 /* Ghost components */
-@import "ghost/header.css";
 @import "ghost/content.css";
 @import "ghost/readmore.css";
 @import "ghost/members.css";
@@ -26,6 +25,7 @@ production stylesheet in assets/built/screen.css using: gulp dev
 /* Normally components */
 @import "components/card.css";
 @import "components/tag.css";
+@import "components/header.css";
 
 /* New styles
 /* ---------------------------------------------------------- */
@@ -42,29 +42,6 @@ html,
     flex-direction: column;
     min-height: 100vh;
     background: #fff;
-}
-
-/* Header
-/* ---------------------------------------------------------- */
-
-.gh-head-actions a {
-    display: inline-flex;
-    align-items: center;
-    margin: 0;
-    padding: 10px;
-}
-
-.gh-head-actions a svg {
-    height: 1.8rem;
-    fill: currentcolor;
-}
-
-.gh-head-actions a:first-child svg {
-    margin-left: 20px;
-}
-
-.gh-head-actions a:last-child svg {
-    height: 2rem;
 }
 
 /* Unmigrated
@@ -187,11 +164,6 @@ h2.gh-card-title a {
 
 /* Post
 /* ---------------------------------------------------------- */
-
-.gh-header {
-    padding: 0 0 8vmin 0;
-    text-align: left;
-}
 
 .gh-post-meta {
     display: block;
