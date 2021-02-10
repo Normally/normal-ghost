@@ -4,13 +4,14 @@
 
 .post-tag {
     display: inline-block;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     font-weight: bold;
     font-size: 1.2rem;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 1rem;
     margin-right: 1rem;
+    border-radius: 60px;
 }
 
 .post-tag:hover {
@@ -19,7 +20,7 @@
 
 .post-tag a {
     text-decoration: none;
-    color: black;
+    color: rgba(0, 0, 0, 0.5);
     padding: 0.2rem 1.5rem;
     display: block;
 }
