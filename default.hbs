@@ -19,41 +19,7 @@
 <body class="{{body_class}}">
 <div class="gh-viewport">
 
-<style>
-  /* WIP – to move */
-
-  .n-head-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .n-head-sitelink a {
-    padding-bottom: 2px;
-    border-bottom: 0px solid #464646;
-  }
-
-  .n-head-sitelink a:hover {
-    border-bottom: 1px solid #464646
-  }
-</style>
-
-<header class="gh-head">
-  <div class="n-head-inner gh-container">
-    <div class="n-head-logo">
-      <a class="gh-head-logo" href="{{@site.url}}">
-        {{#if @site.logo}}
-            <img src="{{@site.logo}}" alt="{{@site.title}}" />
-        {{else}}
-            {{@site.title}}
-        {{/if}}
-      </a>
-    </div>
-    <div class="n-head-sitelink">
-      <a href="https://normally.com">normally.com</a>
-    </div>
-  </div>
-</header>
+{{> "header"}}
 
 <main class="gh-main">
 
