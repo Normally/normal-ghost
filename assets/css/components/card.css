@@ -59,6 +59,7 @@
 }
 
 .card-meta time {
+    font-size: 1.8rem;
     opacity: 0.5;
     margin-left: 0.5rem;
 }
@@ -96,11 +97,9 @@
 }
 
 @media (max-width: 500px) {
-    .card-meta .authors {
-        font-size: 1.6rem;
-    }
-
-    .card-excerpt {
+    .card-meta .authors,
+    .card-excerpt,
+    .card-meta time {
         font-size: 1.6rem;
     }
 }
