@@ -27,3 +27,12 @@
 .gh-post-tags {
     margin-bottom: 1rem;
 }
+
+@media (max-width: 500px) {
+    .post-tag {
+        font-size: 1.1rem;
+    }
+    .post-tag a {
+        padding: 0.1rem 1.2rem;
+    }
+}
