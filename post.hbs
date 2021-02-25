@@ -4,17 +4,6 @@
 
 <article class="gh-article {{post_class}}">
     <header class="gh-header gh-canvas">
-      {{#if tags}}
-        <div class="gh-card-tags">
-          {{#foreach tags}}
-            <div class="post-tag">
-              <a href="{{url}}">
-                {{name}}
-              </a>
-            </div>
-          {{/foreach}}
-        </div>
-      {{/if}}
         <h1 class="gh-title">
           <a href="{{url}}">
             {{title}}
@@ -28,6 +17,18 @@
             {{date format="D MMM YYYY"}}
           </time>
         </span>
+
+      {{#if tags}}
+        <div class="gh-card-tags">
+          {{#foreach tags}}
+            <div class="post-tag">
+              <a href="{{url}}">
+                {{name}}
+              </a>
+            </div>
+          {{/foreach}}
+        </div>
+      {{/if}}
 
         {{#if custom_excerpt}}
         <p class="gh-excerpt">{{custom_excerpt}}</p>
