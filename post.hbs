@@ -9,10 +9,16 @@
             {{title}}
           </a>
         </h1>
+
+        {{#if custom_excerpt}}
+        <p class="gh-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
         <span class="gh-post-meta">
-          <div class="gh-authors">
+          <span class="gh-authors">
             {{authors}}
-          </div>
+          </span>
+          ·
           <time datetime="{{date format="YYYY-MM-DD"}}">
             {{date format="D MMM YYYY"}}
           </time>
@@ -30,9 +36,6 @@
         </div>
       {{/if}}
 
-        {{#if custom_excerpt}}
-        <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
 
         {{#if feature_image}}
         <img class="gh-feature-image"
